@@ -87,7 +87,7 @@ footer a{color:var(--gold)}
   <div class="hook">Just £1 a ticket. One ticket could win you a £1,000 MacBook Air.</div>
   <div class="jp"><div class="topprize"><span class="tag">★ TOP PRIZE ★</span><div class="v">£1,000</div><div class="n">MacBook Air</div></div><div class="cash"><div class="cashchip"><div class="v">£250</div><div class="n">Cash</div></div><div class="cashchip"><div class="v">£150</div><div class="n">Cash</div></div></div></div>
   <a class="cta" href="https://www.pta-events.co.uk/stoneydown" target="_blank" rel="noopener">🎟️ Buy Tickets Now</a>
-  <div class="count" id="countdown">Draw: Friday 10 July</div>
+  <div class="count" id="countdown">Draw: 5:30pm, Fri 10 July at the fete</div>
   <div class="cause">Every £1 helps fund trips, books and the things that make school brilliant for the children of Stoneydown Park.</div>
   <div class="trust"><span>✔ Licensed lottery</span><span>✔ Run by the school PTA</span><span>✔ Waltham Forest reg 05/WF/SSL.23.24</span><span>✔ 16+</span></div>
 </header>
@@ -96,7 +96,7 @@ footer a{color:var(--gold)}
 <div class="bottombar"><a href="https://www.pta-events.co.uk/stoneydown" target="_blank" rel="noopener">🎟️ Buy Tickets — £1</a></div>
 <footer>
   <strong>Stoneydown Park Primary School PTA — Summer Fete Raffle 2026</strong><br>
-  Draw: Friday 10 July 2026 · Tickets £1 · <a href="https://www.pta-events.co.uk/stoneydown" target="_blank" rel="noopener">Buy online</a><br>
+  Draw: 5:30pm, Friday 10 July 2026, at the summer fete · Tickets £1 · <a href="https://www.pta-events.co.uk/stoneydown" target="_blank" rel="noopener">Buy online</a><br>
   Licensed small society lottery · Waltham Forest reg 05/WF/SSL.23.24 · Promoter: Laura Smith · 16+<br>
   Huge thanks to the 70 local businesses who donated prizes 💜
 </footer>
@@ -104,8 +104,8 @@ footer a{color:var(--gold)}
 var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 var T=5222,el=document.getElementById('pooltotal');
 if(reduce){el.textContent='£'+T.toLocaleString()+'+';}else{var s=0,st=T/55,iv=setInterval(function(){s+=st;if(s>=T){s=T;clearInterval(iv);el.textContent='£'+T.toLocaleString()+'+';return;}el.textContent='£'+Math.floor(s).toLocaleString();},22);}
-var draw=new Date('2026-07-10T18:00:00'),cd=document.getElementById('countdown');
-function tick(){var d=draw-new Date();if(d<=0){cd.textContent='🎉 Draw day — last chance to enter!';return;}var dd=Math.floor(d/864e5),h=Math.floor(d/36e5%24),m=Math.floor(d/6e4%60);cd.textContent='⏳ '+dd+'d '+h+'h '+m+'m left · Draw Fri 10 July';}
+var draw=new Date('2026-07-10T17:30:00'),cd=document.getElementById('countdown');
+function tick(){var d=draw-new Date();if(d<=0){cd.textContent='🎉 Draw day — last chance to enter!';return;}var dd=Math.floor(d/864e5),h=Math.floor(d/36e5%24),m=Math.floor(d/6e4%60);cd.textContent='⏳ '+dd+'d '+h+'h '+m+'m left · Draw 5:30pm Fri 10 Jul at the fete';}
 tick();setInterval(tick,30000);
 if(!reduce&&'IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.card').forEach(function(c){c.classList.add('reveal');io.observe(c);});}
 </script>
