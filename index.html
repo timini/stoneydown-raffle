@@ -8,7 +8,24 @@
 <meta property="og:image" content="https://stoneydownraffle.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:url" content="https://stoneydownraffle.com/"><meta property="og:site_name" content="Stoneydown Park PTA">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Stoneydown Park Summer Raffle 2026 — 73 Prizes!"><meta name="twitter:description" content="£5,222 of prizes. £1 a ticket. Win a MacBook Air & more."><meta name="twitter:image" content="https://stoneydownraffle.com/og-image.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"Stoneydown Park Primary Summer Fete Raffle 2026","startDate":"2026-07-10","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Stoneydown Park Primary School","address":"Walthamstow, London"},"organizer":{"@type":"Organization","name":"Stoneydown Park Primary PTA"},"description":"Summer fete raffle, over £5,222 of prizes from 70 local businesses, £1 a ticket."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"Stoneydown Park Primary Summer Fete Raffle 2026","startDate":"2026-07-10","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Stoneydown Park Primary School","address":"Walthamstow, London"},"organizer":{"@type":"Organization","name":"Stoneydown Park Primary PTA"},"description":"Summer fete raffle, over £5,222 of prizes from 70 local businesses, £1 a ticket."}
+// confetti 🎊
+function confettiBurst(n){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var cv=document.getElementById('cfcanvas');
+  if(!cv){cv=document.createElement('canvas');cv.id='cfcanvas';cv.style.cssText='position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:999';document.body.appendChild(cv);}
+  var ctx=cv.getContext('2d');cv.width=innerWidth;cv.height=innerHeight;
+  var cols=['#ffd54a','#ff4fa3','#7b2ff7','#ff9d2f','#ffffff'],ps=[];
+  for(var i=0;i<(n||140);i++){ps.push({x:Math.random()*cv.width,y:-20-Math.random()*cv.height*0.4,r:5+Math.random()*7,c:cols[i%cols.length],vx:-3+Math.random()*6,vy:3+Math.random()*5,rot:Math.random()*6,vr:-0.2+Math.random()*0.4});}
+  var start=performance.now(),DUR=3800;
+  (function frame(t){var el=t-start;ctx.clearRect(0,0,cv.width,cv.height);
+    ps.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=0.06;p.rot+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.globalAlpha=Math.max(0,1-el/DUR);ctx.fillStyle=p.c;ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.6);ctx.restore();});
+    if(el<DUR)requestAnimationFrame(frame);else ctx.clearRect(0,0,cv.width,cv.height);})(start);
+}
+setTimeout(function(){confettiBurst(160);},450);
+document.querySelectorAll('.cta,.topbar a,.bottombar a').forEach(function(b){b.addEventListener('click',function(){confettiBurst(120);});});
+
+</script>
 <style>
 :root{--gold:#ffd54a;--pink:#ff4fa3;--purple:#7b2ff7;--ink:#231055}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -108,5 +125,22 @@ var draw=new Date('2026-07-10T17:30:00'),cd=document.getElementById('countdown')
 function tick(){var d=draw-new Date();if(d<=0){cd.textContent='🎉 Draw day — last chance to enter!';return;}var dd=Math.floor(d/864e5),h=Math.floor(d/36e5%24),m=Math.floor(d/6e4%60);cd.textContent='⏳ '+dd+'d '+h+'h '+m+'m left · Draw 5:30pm Fri 10 Jul at the fete';}
 tick();setInterval(tick,30000);
 if(!reduce&&'IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.card').forEach(function(c){c.classList.add('reveal');io.observe(c);});}
+
+// confetti 🎊
+function confettiBurst(n){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var cv=document.getElementById('cfcanvas');
+  if(!cv){cv=document.createElement('canvas');cv.id='cfcanvas';cv.style.cssText='position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:999';document.body.appendChild(cv);}
+  var ctx=cv.getContext('2d');cv.width=innerWidth;cv.height=innerHeight;
+  var cols=['#ffd54a','#ff4fa3','#7b2ff7','#ff9d2f','#ffffff'],ps=[];
+  for(var i=0;i<(n||140);i++){ps.push({x:Math.random()*cv.width,y:-20-Math.random()*cv.height*0.4,r:5+Math.random()*7,c:cols[i%cols.length],vx:-3+Math.random()*6,vy:3+Math.random()*5,rot:Math.random()*6,vr:-0.2+Math.random()*0.4});}
+  var start=performance.now(),DUR=3800;
+  (function frame(t){var el=t-start;ctx.clearRect(0,0,cv.width,cv.height);
+    ps.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=0.06;p.rot+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.globalAlpha=Math.max(0,1-el/DUR);ctx.fillStyle=p.c;ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.6);ctx.restore();});
+    if(el<DUR)requestAnimationFrame(frame);else ctx.clearRect(0,0,cv.width,cv.height);})(start);
+}
+setTimeout(function(){confettiBurst(160);},450);
+document.querySelectorAll('.cta,.topbar a,.bottombar a').forEach(function(b){b.addEventListener('click',function(){confettiBurst(120);});});
+
 </script>
 </body></html>
